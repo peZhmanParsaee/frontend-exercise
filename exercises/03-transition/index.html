@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Transition</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+        background-color: pink;
+        margin: 14px;
+      }
+      .transformed:hover {
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+      .transitioned:hover {
+        -moz-transform: rotate(0.25turn);
+        -o-transform: rotate(0.25turn);
+        -webkit-transform: rotate(0.25turn);
+        -ms-transform: rotate(0.25turn);
+        transform: rotate(0.25turn);
+        -moz-transition: 2s all;
+        -o-transition: 2s all;
+        -webkit-transition: 2s all;
+        transition: 2s all;
+      }
+      .transitioned2:hover {
+        -moz-transform: rotate(1.57rad);
+        -o-transform: rotate(1.57rad);
+        -webkit-transform: rotate(1.57rad);
+        -ms-transform: rotate(1.57rad);
+        transform: rotate(1.57rad);
+        -moz-transition: 2.35s all;
+        -o-transition: 2.35s all;
+        -webkit-transition: 2.35s all;
+        transition: 2.35s all;
+      }
+      .transitioned3:hover {
+        -moz-transform: rotate(100grad);
+        -o-transform: rotate(100grad);
+        -webkit-transform: rotate(100grad);
+        -ms-transform: rotate(100grad);
+        transform: rotate(100grad);
+        -moz-transition: 2350ms all;
+        -o-transition: 2350ms all;
+        -webkit-transition: 2350ms all;
+        transition: 2350ms all;
+      }
+      .transitioned4 {
+        -moz-transition: 2.35s;
+        -o-transition: 2.35s;
+        -webkit-transition: 2.35s;
+        transition: 2.35s;
+      }
+      .transitioned4:hover {
+        -moz-transform: rotate(0.25turn);
+        -o-transform: rotate(0.25turn);
+        -webkit-transform: rotate(0.25turn);
+        -ms-transform: rotate(0.25turn);
+        transform: rotate(0.25turn);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="transformed">Hover on me</div>
+    <div class="transitioned">Hover on me</div>
+    <div class="transitioned2">Hover on me</div>
+    <div class="transitioned3">Hover on me</div>
+    <div class="transitioned4">Hover on me</div>
+  </body>
+</html>
