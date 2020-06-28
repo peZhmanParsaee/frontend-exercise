@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .wrapper {
+        border: 1px solid #000;
+        width: 600px;
+        margin: 0 auto;
+      }
+      .tilt {
+        width: 80px;
+        height: 80px;
+        background-color: rgb(192, 111, 192);
+        margin: 25px;
+      }
+      .tilt:first-child {
+        -moz-transition-property: opacity, left;
+        -o-transition-property: opacity, left;
+        -webkit-transition-property: opacity, left;
+        transition-property: opacity, left;
+        -moz-transition-duration: 2s, 4s;
+        -o-transition-duration: 2s, 4s;
+        -webkit-transition-duration: 2s, 4s;
+        transition-duration: 2s, 4s;
+        position: relative;
+      }
+      .wrapper:hover .tilt:first-child {
+        opacity: 0.2;
+        left: 300px;
+      }
+      .tilt:nth-child(2) {
+        -moz-transition-property: opacity, transform;
+        -o-transition-property: opacity, transform;
+        -webkit-transition-property: opacity, transform;
+        transition-property: opacity, transform;
+        -moz-transition-duration: 2s, 4s;
+        -o-transition-duration: 2s, 4s;
+        -webkit-transition-duration: 2s, 4s;
+        transition-duration: 2s, 4s;
+      }
+      .wrapper:hover .tilt:nth-child(2) {
+        opacity: 0.2;
+        -moz-transform: translateX(300px);
+        -o-transform: translateX(300px);
+        -webkit-transform: translateX(300px);
+        transform: translateX(300px);
+      }
+      .tilt:nth-child(3) {
+        -moz-transition-property: opacity, transform;
+        -o-transition-property: opacity, transform;
+        -webkit-transition-property: opacity, transform;
+        transition-property: opacity, transform;
+        -moz-transition-duration: 2s, 4s;
+        -o-transition-duration: 2s, 4s;
+        -webkit-transition-duration: 2s, 4s;
+        transition-duration: 2s, 4s;
+        -moz-transition-delay: 0.4s;
+        -o-transition-delay: 0.4s;
+        -webkit-transition-delay: 0.4s;
+        transition-delay: 0.4s;
+      }
+      .wrapper:hover .tilt:nth-child(3) {
+        opacity: 0.2;
+        -moz-transform: translateX(300px) rotate(150grad);
+        -o-transform: translateX(300px) rotate(150grad);
+        -webkit-transform: translateX(300px) rotate(150grad);
+        transform: translateX(300px) rotate(150grad);
+      }
+      .tilt:nth-child(4) {
+        transition-property: opacity, transform;
+        transition-duration: 2s, 4s;
+        transition-timing-function: linear;
+        transition-delay: 0.4s;
+      }
+      .wrapper:hover .tilt:nth-child(4) {
+        transform: translateX(300px) rotate(150grad);
+      }
+      .tilt:nth-child(5) {
+        transition: opacity, transform, border-radius, background-color 2s, 4s,
+          0.5s, 0.5s ease-in 0.4s;
+      }
+      .wrapper:hover .tilt:nth-child(5) {
+        opacity: 0.5;
+        transform: translateX(300px) rotate(150grad);
+        border-radius: 25px;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="tilt"></div>
+      <div class="tilt"></div>
+      <div class="tilt">ease</div>
+      <div class="tilt">linear</div>
+      <div class="tilt">ease-in</div>
+    </div>
+  </body>
+</html>
