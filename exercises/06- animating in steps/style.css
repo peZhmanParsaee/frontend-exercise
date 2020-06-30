@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+
+h1:nth-child(1):hover {
+  -moz-transition: 4s all steps(3, end);
+  -webkit-transition: 4s all steps(3, end);
+  transition: 4s all steps(3, end);
+  -moz-transform: translateX(400px);
+  -webkit-transform: translateX(400px);
+  transform: translateX(400px);
+}
+
+h1:nth-child(2):hover {
+  -moz-transition: 4s all steps(3, start);
+  -webkit-transition: 4s all steps(3, start);
+  transition: 4s all steps(3, start);
+  -moz-transform: translateX(400px);
+  -webkit-transform: translateX(400px);
+  transform: translateX(400px);
+}
