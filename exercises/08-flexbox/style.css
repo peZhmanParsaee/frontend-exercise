@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex;
+  background-color: dodgerblue;
+  height: 200px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 60px;
+  flex: 2 0 150px;
+}
+
+.flex-container > div:nth-child(1) {
+  margin-right: 0;
+  flex: none;
+  align-self: center;
+}
