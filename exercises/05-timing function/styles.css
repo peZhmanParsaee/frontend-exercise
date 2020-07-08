@@ -1,0 +1,67 @@
+.wrapper {
+  width: 600px;
+  border: 2px solid #000;
+  margin: 0 auto;
+  padding: 4px 6px;
+  box-shadow: 2px 2px 2px #777;
+  position: relative;
+}
+
+.anim {
+  width: 60px;
+  height: 60px;
+  background-color: #eee;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.anim p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.wrapper > p {
+  text-align: center;
+}
+
+#ease {
+  border: 1px solid #ff5555;
+  transition: all 4s ease 0.4s;
+}
+
+#ease-in.anim {
+  border: 1px solid #aa4391;
+  transition: all 4s ease-in 0.4s;
+}
+
+#ease-out {
+  border: 1px solid #08ff56;
+  transition: all 4s ease-out 0.4s;
+}
+
+#ease-in-out {
+  border: 1px solid #5319f3;
+  transition: all 4s ease-in-out 0.4s;
+}
+
+#linear {
+  border: 1px solid #fffc55;
+  transition: all 4s linear 0.4s;
+}
+
+#custom {
+  border: 1px solid #f155ff;
+  transition: all 4s cubic-bezier(1, 0.835, 0, 0.945) 0.4s;
+}
+
+#negative {
+  border: 1px solid #5558ff;
+  transition: all 4s cubic-bezier(1, -0.53, 0.405, 1.425) 0.4s;
+}
+
+.wrapper:hover .anim {
+  transform: rotate(720deg);
+  margin-left: 540px;
+  background-color: #fff;
+  border-radius: 30px;
+}
