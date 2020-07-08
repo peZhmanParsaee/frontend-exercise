@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cross Fade Effect</title>
+    <style>
+      div.crossfade {
+        background: url("leaf-veins.jpg");
+        background-size: cover;
+      }
+      div.crossfade,
+      div.crossfade img {
+        width: 418px;
+        height: 500px;
+      }
+      div.crossfade img {
+        transition: 3s opacity ease-out;
+      }
+      div.crossfade img:hover {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="crossfade">
+      <img src="jatropha-hybrid.jpg" alt="Jatropha Hybrid leaf" />
+    </div>
+  </body>
+</html>
