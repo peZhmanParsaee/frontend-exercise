@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>01- CSS-3 Transform</title>
+    <style>
+      #img-1,
+      #img-2,
+      #img-3,
+      #img-4,
+      #img-5,
+      #img-6,
+      #img-7 {
+        width: 300px;
+        height: 200px;
+        margin: 2em 0 0 1.4em;
+      }
+
+      /* Rotate */
+      #img-1 {
+        -moz-transform: rotate(7.5deg);
+        -o-transform: rotate(7.5deg);
+        -webkit-transform: rotate(7.5deg);
+        -ms-transform: rotate(7.5deg);
+        transform: rotate(7.5deg);
+      }
+      #img-2 {
+        -moz-transform-origin: right 0;
+        -o-transform-origin: right 0;
+        -webkit-transform-origin: right 0;
+        -ms-transform-origin: right 0;
+        transform-origin: right 0;
+        -moz-transform: rotate(7.5deg);
+        -o-transform: rotate(7.5deg);
+        -webkit-transform: rotate(7.5deg);
+        -ms-transform: rotate(7.5deg);
+        transform: rotate(7.5deg);
+      }
+      #img-3 {
+        -moz-transform-origin: right top;
+        -o-transform-origin: right top;
+        -webkit-transform-origin: right top;
+        -ms-transform-origin: right top;
+        transform-origin: right top;
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -ms-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+      }
+
+      /* Flip */
+      #img-4 {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+
+      /* Translate */
+      #img-5 {
+        -moz-transform: translate(50px, -4em);
+        -o-transform: translate(50px, -4em);
+        -webkit-transform: translate(50px, -4em);
+        -ms-transform: translate(50px, -4em);
+        transform: translate(50px, -4em);
+      }
+      #img-6 {
+        -moz-transform: translate(50px, 4em);
+        -o-transform: translate(50px, 4em);
+        -webkit-transform: translate(50px, 4em);
+        -ms-transform: translate(50px, 4em);
+        transform: translate(50px, 4em);
+      }
+      #img-7 {
+        -moz-transform: skewX(21deg) skewY(30deg);
+        -o-transform: skewX(21deg) skewY(30deg);
+        -webkit-transform: skewX(21deg) skewY(30deg);
+        -ms-transform: skewX(21deg) skewY(30deg);
+        transform: skewX(21deg) skewY(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rotate</h1>
+    <img id="img-1" src="./red-fox.jpg" alt="Red Fox" />
+    <img id="img-2" src="./red-fox.jpg" alt="Red Fox" />
+    <img id="img-3" src="./red-fox.jpg" alt="Red Fox" />
+    <h1>Flip</h1>
+    <img id="img-4" src="./red-fox.jpg" alt="Red Fox" />
+    <h1>Translate</h1>
+    <img id="img-5" src="./red-fox.jpg" alt="Red Fox" />
+    <img id="img-6" src="./red-fox.jpg" alt="Red Fox" />
+    <h1>Skew</h1>
+    <img id="img-7" src="./red-fox.jpg" alt="Red Fox" />
+  </body>
+</html>
