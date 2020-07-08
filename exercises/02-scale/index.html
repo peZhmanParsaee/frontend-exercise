@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Scale</title>
+    <style>
+      div {
+        width: 80px;
+        height: 80px;
+        background-color: skyblue;
+      }
+      .scaled {
+        transform: scale(0.7);
+        background-color: pink;
+      }
+      .scaled2 {
+        transform: scale(2, 0.5);
+        transform-origin: left;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Normal</div>
+    <div class="scaled">Scaled</div>
+    <div class="scaled2">Scaled</div>
+  </body>
+</html>
