@@ -126,5 +126,60 @@
     <svg width="500" height="210">
       <polygon points="100,10 40,198 190,78 10,78 160,198" class="asterisk" />
     </svg>
+
+    <svg width="800" height="300">
+      <polyline
+        points="20,20 40,25 60,40 80,120 120,140 200,180"
+        style="stroke: #000; stroke-width: 1; fill: none;"
+      />
+      <polyline
+        points="210,20 230,20 230,40 250,40 250,80 270,80 270,100"
+        style="stroke-width: 1; stroke: #f00; fill: #fff;"
+      />
+    </svg>
+
+    <svg height="210" width="400">
+      <path d="M150 0 L75 200 L225 200 Z" />
+    </svg>
+
+    <svg height="400" width="450">
+      <path
+        id="lineAB"
+        d="M 100 350 l 150 -300"
+        stroke="#f00"
+        stroke-width="3"
+        fill="none"
+      />
+      <path
+        id="lineBC"
+        d="M 250 50 l 150 300"
+        stroke="#f00"
+        stroke-width="3"
+        fill="none"
+      />
+      <path d="M 175 200 l 150 0" stroke="#0f0" stroke-width="3" fill="none" />
+      <path
+        d="M 100 350 q 150 -300 300 0"
+        stroke="#00f"
+        stroke-width="5"
+        fill="none"
+      />
+      <g stroke="black" stroke-width="3" fill="black">
+        <circle id="pointA" cx="100" cy="350" r="3" />
+        <circle id="pointB" cx="250" cy="50" r="3" />
+        <circle id="pointC" cx="400" cy="350" r="3" />
+      </g>
+      <g
+        font-size="30"
+        font-family="sans-serif"
+        fill="black"
+        stroke="none"
+        text-anchor="middle"
+      >
+        <text x="100" y="350" dx="-30">A</text>
+        <text x="250" y="50" dy="-10">B</text>
+        <text x="400" y="350" dx="30">C</text>
+      </g>
+    </svg>
   </body>
 </html>
