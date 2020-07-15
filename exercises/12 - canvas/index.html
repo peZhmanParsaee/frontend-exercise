@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="400"
+      style="border: 1px solid #000000;"
+    >
+    </canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#FF0000";
+      ctx.fillRect(0, 0, 150, 75);
+
+      ctx.moveTo(0, 0);
+      ctx.lineTo(200, 100);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, Math.PI * 2);
+      ctx.stroke();
+
+      var grd = ctx.createLinearGradient(0, 0, 200, 0);
+      grd.addColorStop(0, "white");
+      grd.addColorStop(1, "red");
+
+      ctx.fillStyle = grd;
+      ctx.fillRect(10, 100, 150, 80);
+
+      var rgrd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+      rgrd.addColorStop(0, "red");
+      rgrd.addColorStop(1, "white");
+
+      ctx.fillStyle = rgrd;
+      ctx.fillRect(10, 10, 150, 80);
+    </script>
+  </body>
+</html>
