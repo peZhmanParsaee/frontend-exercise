@@ -1,3 +1,7 @@
+body * + * {
+  margin-top: 1.5em;
+}
+
 .flex-container {
   display: flex;
   background-color: dodgerblue;
@@ -20,4 +24,71 @@
   margin-right: 0;
   flex: none;
   align-self: center;
+}
+
+.flex-container2 {
+  display: flex;
+  background-color: tomato;
+}
+
+.flex-container2 > div {
+  flex-basis: 40%;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.non-flex-items,
+.fix-flex,
+.holy-grail,
+.flex-grid {
+  display: flex;
+  background-color: tomato;
+}
+
+.non-flex-items > div,
+.fix-flex > div,
+.holy-grail > div,
+.flex-grid > div {
+  margin-top: 0;
+  border: 1px solid;
+  background-color: crimson;
+}
+
+.non-flex-items > div + div,
+.fix-flex > div + div,
+.holy-grail > div + div,
+.flex-grid > div + div {
+  margin-left: 0.25em;
+}
+
+.fix-flex > div:first-child {
+  flex: 0 0 300px;
+}
+
+.fix-flex > div:nth-child(2) {
+  flex: 1;
+}
+
+.holy-grail > div:first-child {
+  flex: 0 0 200px;
+}
+
+.holy-grail > div:nth-child(2) {
+  flex: 1;
+}
+
+.holy-grail > div:nth-child(3) {
+  flex: 0 0 200px;
+}
+
+.flex-grid > div:first-child {
+  flex: 25%;
+}
+
+.flex-grid > div:nth-child(2) {
+  flex: 50%;
+}
+
+.flex-grid > div:nth-child(3) {
+  flex: 25%;
 }
