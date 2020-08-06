@@ -1,0 +1,125 @@
+<html>
+  <head>
+    <style>
+      :root,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      * {
+        box-sizing: inherit;
+      }
+
+      /* .button-link + .button-link {
+        margin-top: 0.5em;
+      } */
+
+      body * + * {
+        margin-top: 0.5em;
+      }
+
+      body {
+        background-color: #eee;
+        font-family: Helvetica, Arial, Tahoma, serif;
+      }
+
+      header {
+        background-color: #0072b0;
+        color: #fff;
+        border-radius: 0.5em;
+        padding: 1em;
+      }
+
+      /* .wrapper {
+        margin-right: -1.5em;
+        margin-left: -1.5em;
+      } */
+
+      .container {
+        margin-top: 1.5em;
+        /* display: table;
+        width: 100%;
+        border-spacing: 1.5em 0; */
+      }
+
+      main {
+        display: table-cell;
+        background-color: #fff;
+        padding: 1em 1.5em;
+        float: left;
+        width: 70%;
+        border-radius: 0.5em;
+        min-height: 400px;
+      }
+
+      aside {
+        display: table-cell;
+        background-color: #fff;
+        padding: 1.5em;
+        float: left;
+        width: calc(30% - 1.5em);
+        /* width: 30%; */
+        margin-left: 1.5em;
+        border-radius: 0.5em;
+        margin-top: 0;
+        min-height: 400px;
+      }
+
+      .clear {
+        clear: both;
+      }
+
+      footer {
+        border: 1px solid #808080;
+        margin-top: 1em;
+        border-radius: 0.5em;
+        text-align: center;
+      }
+
+      .clearfix::after {
+        display: block;
+        content: " ";
+        clear: both;
+      }
+
+      .button-link {
+        display: block;
+        background-color: #0090c9;
+        color: #fff;
+        border-radius: 0.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 0.5em;
+      }
+
+      .contact-link {
+        display: block;
+        color: #0072b0;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    </style>
+    <title>Lorem ipsum store</title>
+  </head>
+  <body>
+    <header>
+      <h1>Lorem Ipsum Store</h1>
+    </header>
+    <div class="container clearfix">
+      <main class="main">
+        <h2>Welcome here</h2>
+      </main>
+      <aside class="sidebar">
+        <a class="button-link" href="https://www.twitter.com">Follow us on twitter</a>
+        <a class="button-link" href="https://www.instagram.com">Follow us on instagram</a>
+        <a class="contact-link" href="/contact-us.html">Contact us</a>
+      </aside>
+      <!-- <div class="clear"></div> -->
+    </div>
+    <footer>
+      <p>&copy; All rights reserved. 2020</p>
+    </footer>
+  </body>
+</html>
