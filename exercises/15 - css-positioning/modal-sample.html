@@ -3,6 +3,21 @@
   <head>
     <title>Modal sample</title>
     <style>
+      :root {
+        box-sizing: border-box;
+        --z-loading-indicator: 100;
+        --z-nav-menu: 200;
+        --z-dropdown-menu: 300;
+        --z-modal-backdrop: 400;
+        --z-modal-body: 410;
+      }
+
+      *,
+      ::after,
+      ::before {
+        box-sizing: inherit;
+      }
+
       body {
         margin: 0;
         min-height: 200vh;
@@ -38,6 +53,8 @@
         bottom: 0;
         left: 0;
         background-color: #00000050;
+        /* z-index: 1; */
+        z-index: var(--z-modal-backdrop);
       }
 
       .modal-body {
@@ -49,16 +66,18 @@
         padding: 2em 3em;
         background-color: #fff;
         overflow: auto;
+        /* z-index: 2; */
+        z-index: var(--z-modal-body);
       }
 
       .modal-close {
         position: absolute;
-        top: 0.3em;
-        right: 0.3em;
+        top: 0;
+        right: 0;
         padding: 0.3em;
         cursor: pointer;
-        width: 1em;
-        height: 1em;
+        width: 1.5em;
+        height: 1.5em;
         font-size: 2em;
         text-indent: 10em;
         overflow: hidden;
@@ -72,6 +91,88 @@
         top: 0.2em;
         left: 0.1em;
         text-indent: 0;
+      }
+
+      .container {
+        display: flex;
+        width: 80%;
+        max-width: 1000px;
+        margin: 1em auto;
+        min-height: 100vh;
+      }
+
+      .col-main {
+        flex: 1 80%;
+      }
+
+      .col-sidebar {
+        flex: 20%;
+      }
+
+      .affix {
+        position: sticky;
+        top: 1em;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-label {
+        padding: 0.5em 2em 0.5em 1.5em;
+        border: 1px solid #ccc;
+        background-color: #eee;
+      }
+
+      .dropdown-label::after {
+        content: "";
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        border: 0.3em solid;
+        border-color: #000 transparent transparent;
+      }
+
+      .dropdown:hover .dropdown-label::after {
+        border-color: transparent transparent #000;
+        top: 0.7em;
+      }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 2.1em;
+        min-width: 100%;
+        background-color: #eee;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .submenu {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        border: 1px solid #999;
+      }
+
+      .submenu > li + li {
+        border-top: 1px solid #999;
+      }
+
+      .submenu > li > a {
+        display: block;
+        padding: 0.5em 1em;
+        background-color: #eee;
+        color: #369;
+        text-decoration: none;
+      }
+
+      .submenu > li > a:hover {
+        background-color: #fff;
       }
     </style>
   </head>
@@ -87,7 +188,7 @@
       <div class="modal-body">
         <div class="modal-close" id="close">close</div>
         <h2>Sign up for Newsletter</h2>
-        <p>Sign up for out monthly newsletter</p>
+        <p>Sign up for our monthly newsletter</p>
         <form>
           <p>
             <label for="email">Email</label>
@@ -98,6 +199,36 @@
           </p>
         </form>
       </div>
+    </div>
+    <div class="container">
+      <main class="col-main">
+        <nav>
+          <div class="dropdown">
+            <div class="dropdown-label">Main Menu</div>
+            <div class="dropdown-menu">
+              <ul class="submenu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/explore">Explore</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/specials">Specials</a></li>
+                <li><a href="/about-us">About us</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <h1>IT Podcasts</h1>
+      </main>
+      <aside class="col-sidebar">
+        <div class="affix">
+          <ul class="submenu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/explore">Explore</a></li>
+            <li><a href="/categories">Categories</a></li>
+            <li><a href="/specials">Specials</a></li>
+            <li><a href="/about-us">About us</a></li>
+          </ul>
+        </div>
+      </aside>
     </div>
 
     <script type="text/javascript">
