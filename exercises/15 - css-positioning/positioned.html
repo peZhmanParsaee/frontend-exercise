@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Relative Positioning</title>
+    <style>
+      .relative div {
+        background-color: #1144ee;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        border: 1px solid #000;
+      }
+
+      .relative div:nth-child(2) {
+        position: relative;
+        left: 1em;
+        /* top: 1.5em; */
+        bottom: -1em;
+      }
+
+      .relative div:nth-child(3) {
+        position: relative;
+      }
+
+      body {
+        margin: 40px;
+      }
+
+      .box {
+        display: inline-block;
+        width: 200px;
+        line-height: 200px;
+        text-align: center;
+        border: 2px solid #000;
+        background-color: #ea5;
+        margin-left: -60px;
+        vertical-align: top;
+      }
+
+      .one {
+        margin-left: 0;
+      }
+
+      .two {
+        margin-top: 30px;
+      }
+
+      .three {
+        margin-top: 60px;
+      }
+
+      .positioned {
+        position: relative;
+        background-color: #5ae;
+        z-index: 1;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        height: 2em;
+        background-color: #fff;
+        border: 2px dashed #888;
+        z-index: 100;
+        line-height: initial;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="box one positioned">
+      one
+      <div class="absolute">nested</div>
+    </div>
+    <div class="box two positioned">two</div>
+    <div class="box three">three</div>
+  </body>
+</html>
