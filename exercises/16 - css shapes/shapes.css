@@ -33,3 +33,23 @@ body * + * {
   border-radius: 50%;
   background-color: #600;
 }
+
+.shape {
+  width: 100px;
+  height: 100px;
+  animation-name: shape;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes shape {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #600;
+    border-radius: 50%;
+    transform: rotate(2turn);
+  }
+}
