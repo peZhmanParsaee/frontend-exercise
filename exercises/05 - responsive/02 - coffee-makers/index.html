@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Wombat Coffee Roasters</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="large-screen.css" rel="stylesheet" media="(min-width: 45em)" />
+  </head>
+  <body>
+    <header id="header" class="page-header">
+      <div class="title">
+        <h1>Expresso Coffee</h1>
+        <div class="slogan">Expresso Yourself!</div>
+      </div>
+    </header>
+
+    <nav class="menu" id="main-menu">
+      <button class="menu-toggle" id="toggle-menu">
+        toggle menu
+      </button>
+      <div class="menu-dropdown">
+        <ul class="nav-menu">
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/shop.html">Shop</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/brew.html">Brew</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <aside id="hreo" class="hero">
+      Welcome to Expresso Coffee! Discover the best flavour of coffee all around the world by us.
+      Stay charged with our high quality coffee
+    </aside>
+
+    <main id="main">
+      <div class="row">
+        <section class="column">
+          <h2 class="subtitle">Coffee Beans</h2>
+          <p>
+            We have built partnerships with small farms around the world to hand-select beans at the
+            peak of season. We then carefully roast in
+            <a href="/batch-size.html">small batches</a>
+            to maximize their potential.
+          </p>
+        </section>
+        <section class="column">
+          <h2 class="subtitle">Blends</h2>
+          <p>
+            Our tasters have put together a selection of carefully balanced blends. Our famous
+            <a href="/house-blend.html">house blend</a>
+            is available year round.
+          </p>
+        </section>
+        <section class="column">
+          <h2 class="subtitle">Brewing Equipment</h2>
+          <p>
+            We offer our favorite kettles, French presses, and pour-over cones. Come to one of our
+            <a href="/classes.html">brewing classes</a> to learn how to brew the perfect pour-over
+            cup.
+          </p>
+        </section>
+      </div>
+    </main>
+
+    <script type="text/javascript">
+      (function () {
+        var button = document.getElementById("toggle-menu");
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          var menu = document.getElementById("main-menu");
+          menu.classList.toggle("is-open");
+        });
+      })();
+    </script>
+  </body>
+</html>

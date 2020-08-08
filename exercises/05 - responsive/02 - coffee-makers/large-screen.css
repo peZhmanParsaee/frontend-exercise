@@ -1,0 +1,12 @@
+@media (min-width: 20em) and (max-width: 35em) {
+}
+
+@media (min-width: 20em), (max-width: 35em) {
+}
+
+@media print {
+  * {
+    color: #000 !important;
+    background: none !important;
+  }
+}
