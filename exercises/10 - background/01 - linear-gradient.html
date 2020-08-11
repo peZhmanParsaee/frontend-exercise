@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Linear Gradient</title>
+    <style>
+      :root {
+        --start-color: red;
+        --end-color: blue;
+        --fore-color: #fefefe;
+      }
+
+      body {
+        padding-bottom: 50vh;
+      }
+
+      [class*="fade"] {
+        height: 200px;
+        width: 400px;
+        text-align: center;
+        line-height: 10;
+        color: var(--fore-color);
+        font-weight: bold;
+      }
+
+      .box + .box {
+        margin-top: 1em;
+      }
+
+      .fade {
+        /* declated for fallback */
+        background-color: var(--start-color);
+
+        /* will be "on top", if browser supports it */
+        background-image: linear-gradient(var(--start-color), var(--end-color));
+
+        /* these will reset other properties, like background-position, but it does know what you mean */
+        background: var(--start-color);
+        background: linear-gradient(var(--start-color), var(--end-color));
+      }
+
+      .fade2 {
+        background-image: linear-gradient(90deg, var(--start-color), var(--end-color));
+      }
+
+      .fade3 {
+        background-image: linear-gradient(to left, var(--start-color), var(--end-color));
+      }
+
+      .fade4 {
+        background-image: linear-gradient(to top, var(--start-color), var(--end-color));
+      }
+
+      .animated-fade {
+        background-image: linear-gradient(0deg, var(--start-color), var(--end-color));
+      }
+
+      .animated-fade > hr {
+        margin-left: -50px;
+        margin-right: -50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box fade">
+      <code>linear-gradient(red, blue)</code>
+    </div>
+    <div class="box fade3">
+      <code>
+        linear-gradient(to left, red, blue)
+      </code>
+    </div>
+    <div class="box fade4">
+      <code>
+        linear-gradient(to top, red, blue)
+      </code>
+    </div>
+    <div class="box fade2">
+      <code>
+        linear-gradient(90deg, red, blue)
+      </code>
+    </div>
+    <div class="box animated-fade" id="animated-fade">
+      <code id="animated-fade-code">
+        linear-gradient(0deg, red, blue)
+      </code>
+      <hr id="animated-fade-hr" />
+    </div>
+
+    <script>
+      var animatedFade = document.getElementById("animated-fade");
+      var animatedFadeHr = document.getElementById("animated-fade-hr");
+      var animatedFadeCode = document.getElementById("animated-fade-code");
+
+      var angle = 0;
+      function start(angle) {
+        if (angle >= 360) {
+          angle = 0;
+        }
+
+        animatedFadeHr.style.transform = `rotate(${angle + 90}deg)`;
+        animatedFade.style.backgroundImage = `linear-gradient(${angle}deg, red, blue)`;
+        animatedFadeCode.innerText = `linear-gradient(${angle}deg, red, blue)`;
+
+        angle += 10;
+
+        setTimeout(function () {
+          start(angle);
+        }, 200);
+      }
+      start(angle);
+    </script>
+  </body>
+</html>
