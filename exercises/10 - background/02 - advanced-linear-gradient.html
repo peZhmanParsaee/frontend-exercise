@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Linear Gradient - Advanced</title>
+    <style>
+      :root {
+        --stop-color-1: black;
+        --stop-color-2: red;
+        --stop-color-3: yellow;
+        --fore-color: #fefefe;
+      }
+
+      body {
+        padding-bottom: 50vh;
+      }
+
+      .box + .box {
+        margin-top: 1em;
+      }
+
+      code {
+        text-shadow: 2px 2px 2px #000000;
+      }
+
+      .box {
+        height: 200px;
+        width: 600px;
+        text-align: center;
+        line-height: 10;
+        color: var(--fore-color);
+        font-weight: bold;
+        border: 1px solid #000;
+      }
+
+      .fade-flag {
+        background-image: linear-gradient(
+          to bottom,
+          var(--stop-color-1),
+          var(--stop-color-2),
+          var(--stop-color-3)
+        );
+      }
+
+      .fade-flag2 {
+        background-image: linear-gradient(
+          to bottom,
+          var(--stop-color-1) 0%,
+          var(--stop-color-2) 50%,
+          var(--stop-color-3) 100%
+        );
+      }
+
+      .fade-flag3 {
+        background-image: linear-gradient(
+          to bottom,
+          var(--stop-color-1) 10%,
+          var(--stop-color-2) 35%,
+          var(--stop-color-3) 75%
+        );
+      }
+
+      .fade-flag4 {
+        background-image: linear-gradient(
+          to bottom,
+          var(--stop-color-1) 10px,
+          var(--stop-color-2) 35px,
+          var(--stop-color-3) 75px
+        );
+      }
+
+      .fade-flag5 {
+        /* making a hard switch between stop colors */
+        background-image: linear-gradient(
+          to bottom,
+          var(--stop-color-1) 33%,
+          var(--stop-color-2) 33%,
+          var(--stop-color-2) 66%,
+          var(--stop-color-3) 66%
+        );
+      }
+
+      .progress-bar {
+        height: 1em;
+        width: 600px;
+        background-image: repeating-linear-gradient(-45deg, #57b, #57b 10px, #148 10px, #148 20px);
+        border-radius: 0.3125em;
+      }
+
+      .zebra-stripped {
+        background-image: repeating-linear-gradient(
+          to right,
+          white 0px,
+          white 20px,
+          black 20px,
+          black 40px
+        );
+      }
+
+      .module {
+        background: white;
+        border: 1px solid #ccc;
+        margin: 3%;
+      }
+
+      .module > h2 {
+        padding: 1rem;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .module > p {
+        padding: 0 1rem;
+      }
+
+      .stripe-1 {
+        color: white;
+        background: repeating-linear-gradient(
+          45deg,
+          #606dbc,
+          #606dbc 10px,
+          #465298 10px,
+          #465298 20px
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Multiple color stops</h3>
+    <div class="box fade-flag">
+      <code>linear-gradient(to bottom, black, red, yellow)</code>
+    </div>
+    <div class="box fade-flag2">
+      <code>
+        linear-gradient(to bottom, black 0%, red 50%, yellow 100%);
+      </code>
+    </div>
+    <div class="box fade-flag3">
+      <code>linear-gradient(to bottom, black 10%, red 35%, yellow 75%)</code>
+    </div>
+    <div class="box fade-flag4">
+      <code>linear-gradient(to bottom, black 10px, red 35px, yellow 75px)</code>
+    </div>
+    <hr />
+    <h3>Stripes</h3>
+    <div class="box fade-flag5">
+      <code>
+        linear-gradient(to bottom, black 33%, red 33%, red 66%, yellow 66%)
+      </code>
+    </div>
+    <hr />
+    <h3>Repeating gradient, Progress bar sample</h3>
+    <div class="progress-bar"></div>
+    <h3>Zebra stripped</h3>
+    <div class="box zebra-stripped"></div>
+    <div class="module">
+      <h2 class="stripe-1">Colored Stripes</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis hic sapiente
+        asperiores minus animi nam temporibus cumque magnam doloribus vitae voluptatum cupiditate
+        nostrum omnis vero adipisci recusandae maxime quo labore.
+      </p>
+    </div>
+  </body>
+</html>
