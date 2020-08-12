@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shadow / Gradient</title>
+    <style>
+      h3 {
+        margin-top: 1.5em;
+      }
+
+      .button {
+        padding: 1em;
+        border: 0;
+        color: #fff;
+      }
+      .button:focus {
+        outline: 0;
+      }
+
+      .button-sku {
+        font-size: 0.8rem;
+        background-image: linear-gradient(to bottom, #57b, #148);
+        box-shadow: 0.1em 0.1em 0.5em #124;
+        border-radius: 0.5em;
+      }
+      .button-sku:active {
+        box-shadow: inset 0 0 0.5em #124, 0 0.5em 1em rgba(0, 0, 0, 0.4);
+      }
+
+      .button-flat {
+        font-size: 1rem;
+        background-color: #57b;
+        box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.15);
+      }
+      .button-flat:hover {
+        background-color: #456ab6;
+      }
+      .button-flat:active {
+        background-color: #148;
+      }
+
+      .button-flat-sku {
+        padding: 0.8em;
+        border: 0;
+        font-size: 1rem;
+        color: #fff;
+        border-radius: 0.5em;
+        background-color: #57b;
+        box-shadow: 0 0.4em #148; /* solid box-shadow */
+        text-shadow: 1px 1px #148; /* subtle text-shadow */
+      }
+      .button-flat-sku:active {
+        background-color: #456ab5;
+        transform: translateY(0.1em);
+        box-shadow: 0 0.3em #148;
+      }
+    </style>
+    <body>
+      <h3>Skeuomorphic button</h3>
+      <button class="button button-sku">Sign up now</button>
+
+      <h3>Flat button</h3>
+      <button class="button button-flat">Sign up now</button>
+
+      <h3>Flat + Skeuomorphic button</h3>
+      <button class="button button-flat-sku">Sign up now</button>
+    </body>
+  </head>
+</html>
