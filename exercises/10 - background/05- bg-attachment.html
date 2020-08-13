@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Attachment</title>
+    <style>
+      html {
+        height: 200vh;
+      }
+      body {
+        background-image: url(flower.png);
+        background-attachment: fixed;
+      }
+      .wrapper {
+        min-height: 200vh;
+        background-color: #efefef;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2em;
+      }
+      h2 {
+        margin-top: 48px;
+        text-align: center;
+      }
+      .parent {
+        background-image: url(./kitty.jpeg);
+        height: 200px;
+        width: 50%;
+        max-width: 600px;
+        margin: 32px auto;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      .scroll {
+        background-attachment: scroll;
+      }
+      .fixed {
+        background-attachment: fixed;
+      }
+      .local {
+        background-attachment: local;
+      }
+      .expand {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+
+      <h2>scroll</h2>
+      <div class="parent scroll">
+        <div class="expand"></div>
+      </div>
+
+      <h2>fixed</h2>
+      <div class="parent fixed">
+        <div class="expand"></div>
+      </div>
+
+      <h2>local</h2>
+      <div class="parent local">
+        <div class="expand"></div>
+      </div>
+
+      <p>58</p>
+      <p>59</p>
+      <p>60</p>
+      <p>61</p>
+      <p>62</p>
+      <p>69</p>
+      <p>70</p>
+    </div>
+  </body>
+</html>

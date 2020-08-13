@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Size</title>
+    <style>
+      .kitty {
+        background-image: url(kitty.jpeg);
+      }
+      .kitty {
+        background-image: url(kitty.jpeg);
+        background-repeat: no-repeat;
+        border: 1px solid #000;
+        height: 150px;
+      }
+      .kitty2 {
+        background-image: url(kitty.jpeg);
+        background-repeat: no-repeat;
+        border: 1px solid #000;
+        height: 400px;
+      }
+      .bg-1 {
+        background-size: auto;
+      }
+      .bg-2 {
+        background-size: 320px 90px;
+      }
+      .bg-3 {
+        background-size: 320px;
+      }
+      .bg-4 {
+        background-size: 50%;
+      }
+      .bg-5 {
+        background-size: 50% 100%;
+      }
+      .bg-6 {
+        background-size: cover;
+      }
+      .bg-7 {
+        background-size: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><code>background-size: auto</code></h2>
+    <div class="kitty2 bg-1"></div>
+
+    <h2><code>background-size: 320px 90px</code></h2>
+    <div class="kitty bg-2"></div>
+
+    <h2><code>background-size: 320px</code></h2>
+    <div class="kitty bg-3"></div>
+
+    <h2><code>background-size: 50%</code></h2>
+    <div class="kitty2 bg-4"></div>
+
+    <h2><code>background-size: 50% 100%</code></h2>
+    <div class="kitty2 bg-5"></div>
+
+    <h2><code>background-size: cover</code></h2>
+    <div class="kitty bg-6"></div>
+    <h2><code>background-size: cover</code></h2>
+    <div class="kitty2 bg-6"></div>
+
+    <h2><code>background-size: contain</code></h2>
+    <div class="kitty bg-7"></div>
+    <h2><code>background-size: contain</code></h2>
+    <div class="kitty2 bg-7"></div>
+  </body>
+</html>
