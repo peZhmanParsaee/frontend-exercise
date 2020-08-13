@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web safe fonts</title>
+    <style>
+      :root {
+        font-size: calc(1em + 1vw);
+      }
+
+      header h1 {
+        text-align: center;
+        font-style: italic;
+      }
+
+      .row::after {
+        display: block;
+        content: " ";
+        clear: both;
+      }
+
+      .col {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      div + h1 {
+        margin-top: 3em;
+      }
+
+      .serif {
+        font-family: serif;
+      }
+      .georgia {
+        font-family: Georgia;
+      }
+      .times-new-roman {
+        font-family: "Times New Roman";
+      }
+
+      .sans-serif {
+        font-family: sans-serif;
+      }
+      .arial {
+        font-family: Arial;
+      }
+      .helvetica {
+        font-family: Helvetica;
+      }
+      .tahoma {
+        font-family: Tahoma;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Web safe fonts</h1>
+    </header>
+    <div class="row">
+      <div class="col">
+        <h1 class="serif">Serif family</h1>
+        <div>
+          <h2 class="serif">serif</h2>
+          <h2 class="georgia">Georgia</h2>
+          <h2 class="times-new-roman">Times New Roman</h2>
+        </div>
+      </div>
+      <div class="col">
+        <h1 class="sans-serif">San Serif family</h1>
+        <div>
+          <h2 class="sans-serif">san-serif</h2>
+          <h2 class="arial">Arial</h2>
+          <h2 class="helvetica">Helvetica</h2>
+          <h2 class="tahoma">Tahoma</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

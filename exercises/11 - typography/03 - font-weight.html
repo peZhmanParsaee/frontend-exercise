@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weight of fonts</title>
+
+    <style>
+      body {
+        font-family: monospace;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      ul:first-of-type li {
+        display: inline-block;
+      }
+      ul:first-of-type li + li {
+        margin-left: 1em;
+      }
+      ul:first-of-type li span {
+        display: block;
+        text-align: center;
+        color: #aaa;
+      }
+      ul:first-of-type li span:nth-child(1) {
+        font-size: 3rem;
+      }
+      ul:first-of-type li span:nth-child(2) {
+        font-size: 1.1rem;
+      }
+
+      .fw-100 {
+        font-weight: 100;
+      }
+      .fw-200 {
+        font-weight: 200;
+      }
+      .fw-300 {
+        font-weight: 300;
+      }
+      .fw-400 {
+        font-weight: 400;
+        color: #000;
+      }
+      .fw-500 {
+        font-weight: 500;
+      }
+      .fw-600 {
+        font-weight: 600;
+      }
+      .fw-700 {
+        font-weight: 700;
+        color: #000;
+      }
+      .fw-800 {
+        font-weight: 800;
+      }
+      .fw-900 {
+        font-weight: 900;
+      }
+
+      .fw-bold {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+
+      .fw-normal {
+        font-weight: normal;
+        font-size: 3rem;
+      }
+
+      ul.last {
+        font-weight: 100;
+      }
+      ul.last li {
+        font-weight: bolder;
+      }
+
+      ul.stretch {
+        list-style-type: none;
+        font-family: "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+      }
+      ul.stretch li {
+        display: inline-block;
+        margin-left: 0.1em;
+      }
+      ul.stretch li span:first-child {
+        font-size: 5rem;
+        display: block;
+        text-align: center;
+        background-color: #cdcdcd;
+      }
+      ul.stretch li span:nth-child(2) {
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .ultra-condensed {
+        font-stretch: ultra-condensed;
+      }
+      .extra-condensed {
+        font-stretch: extra-condensed;
+      }
+      .condensed {
+        font-stretch: condensed;
+      }
+      .semi-condensed {
+        font-stretch: semi-condensed;
+      }
+      .normal {
+        font-stretch: normal;
+      }
+      .semi-expanded {
+        font-stretch: semi-expanded;
+      }
+      .expanded {
+        font-stretch: expanded;
+      }
+      .extra-expanded {
+        font-stretch: extra-expanded;
+      }
+      .ultra-expanded {
+        font-stretch: ultra-expanded;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <span class="fw-100">A</span>
+        <span>100</span>
+      </li>
+      <li>
+        <span class="fw-200">A</span>
+        <span>200</span>
+      </li>
+      <li>
+        <span class="fw-300">A</span>
+        <span>300</span>
+      </li>
+      <li>
+        <span class="fw-400">A</span>
+        <span>400</span>
+      </li>
+      <li>
+        <span class="fw-500">A</span>
+        <span>500</span>
+      </li>
+      <li>
+        <span class="fw-600">A</span>
+        <span>600</span>
+      </li>
+      <li>
+        <span class="fw-700">A</span>
+        <span>700</span>
+      </li>
+      <li>
+        <span class="fw-800">A</span>
+        <span>800</span>
+      </li>
+      <li>
+        <span class="fw-900">A</span>
+        <span>900</span>
+      </li>
+    </ul>
+
+    <div><span class="fw-normal">A</span> is a normal text letter</div>
+    <div><span class="fw-bold">A</span> is a bolded text letter</div>
+
+    <ul class="last">
+      <li>
+        a
+      </li>
+      <li>
+        b
+        <ul>
+          <li>bolder</li>
+          <li>
+            bolder
+            <ul>
+              <li>even bolder</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="stretch">
+      <li><span class="ultra-condensed">e</span></li>
+      <li><span class="extra-condensed">e</span></li>
+      <li><span class="condensed">e</span></li>
+      <li><span class="semi-condensed">e</span></li>
+      <li><span class="normal">e</span></li>
+      <li><span class="semi-expanded">e</span></li>
+      <li><span class="expanded">e</span></li>
+      <li><span class="extra-expanded">e</span></li>
+      <li><span class="ultra-expanded">e</span></li>
+    </ul>
+    <ul>
+      <li>
+        <span>ultra-condensed</span>
+      </li>
+      <li>
+        <span>extra-condensed</span>
+      </li>
+      <li>
+        <span>condensed</span>
+      </li>
+      <li>
+        <span>semi-condensed</span>
+      </li>
+      <li><span>normal</span></li>
+      <li>
+        <span>semi-expanded</span>
+      </li>
+      <li>
+        <span>expanded</span>
+      </li>
+      <li>
+        <span>extra-expanded</span>
+      </li>
+      <li>
+        <span>ultra-expanded</span>
+      </li>
+    </ul>
+  </body>
+</html>
