@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Origin</title>
+    <style>
+      .wrapper {
+        display: flex;
+      }
+      h2 {
+        text-align: center;
+      }
+      .inputs {
+        text-align: center;
+        margin: 1em;
+      }
+      .inputs label {
+        cursor: pointer;
+        padding: 0.75em 0;
+      }
+      .inputs input {
+        cursor: pointer;
+        margin-left: 0.75em;
+      }
+      .bg {
+        width: 200px;
+        height: 200px;
+        background-image: url(kitty.jpeg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        /* background-position: 19px; */
+        border: 1em dotted rgba(123, 123, 255, 0.5);
+        padding: 1em;
+        margin: 0 auto;
+      }
+      .bg-origin {
+        background-origin: border-box;
+      }
+      .bg-clip {
+        background-clip: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="col">
+        <h2><code>background-origin</code></h2>
+        <div class="inputs">
+          <input
+            type="radio"
+            name="bg-origin-box-selectors"
+            id="bgp-border-box"
+            data-value="border-box"
+            checked
+          />
+          <label for="bgp-border-box">border-box</label>
+          <input
+            type="radio"
+            name="bg-origin-box-selectors"
+            id="bgp-padding-box"
+            data-value="padding-box"
+          />
+          <label for="bgp-padding-box">padding-box</label>
+          <input
+            type="radio"
+            name="bg-origin-box-selectors"
+            id="bgp-content-box"
+            data-value="content-box"
+          />
+          <label for="bgp-content-box">content-box</label>
+        </div>
+        <div class="bg bg-origin"></div>
+      </div>
+      <div class="col">
+        <h2><code>background-clip</code></h2>
+        <div class="inputs">
+          <input
+            type="radio"
+            name="bg-clip-box-selectors"
+            id="bgc-border-box"
+            data-value="border-box"
+            checked
+          />
+          <label for="bgc-border-box">border-box</label>
+          <input
+            type="radio"
+            name="bg-clip-box-selectors"
+            id="bgc-padding-box"
+            data-value="padding-box"
+          />
+          <label for="bgc-padding-box">padding-box</label>
+          <input
+            type="radio"
+            name="bg-clip-box-selectors"
+            id="bgc-content-box"
+            data-value="content-box"
+          />
+          <label for="bgc-content-box">content-box</label>
+        </div>
+        <div class="bg bg-clip"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var bgOriginOptionsSelector = "[name=bg-origin-box-selectors]";
+      var bgOriginOptions = document.querySelectorAll(bgOriginOptionsSelector);
+
+      bgOriginOptions.forEach(function (option) {
+        option.addEventListener("click", function (e) {
+          var elem = document.querySelector(".bg-origin");
+          elem.style.backgroundOrigin = e.target.attributes["data-value"].value;
+        });
+      });
+
+      var bgClipOptionsSelector = "[name=bg-clip-box-selectors]";
+      var bgClipOptions = document.querySelectorAll(bgClipOptionsSelector);
+
+      bgClipOptions.forEach(function (option) {
+        option.addEventListener("click", function (e) {
+          var elem = document.querySelector(".bg-clip");
+          elem.style.backgroundClip = e.target.attributes["data-value"].value;
+        });
+      });
+    </script>
+  </body>
+</html>

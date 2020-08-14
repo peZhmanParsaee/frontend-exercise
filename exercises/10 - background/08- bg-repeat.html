@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background Repeat</title>
+
+    <style>
+      .box {
+        background-image: url(star.svg);
+        background-size: 40px;
+        width: 100px;
+        height: 100px;
+        border: 1px solid lime;
+      }
+      .repeat-x {
+        background-repeat: repeat-x;
+      }
+      .repeat-y {
+        background-repeat: repeat-y;
+      }
+      .tile-round {
+        background-repeat: round;
+      }
+      .tile-space {
+        background-repeat: space;
+      }
+      .no-repeat {
+        background-repeat: no-repeat;
+      }
+      .tile-round-space {
+        background-repeat: space round;
+      }
+      .tile-space-repeat {
+        background-repeat: space repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><code>background-repeat: repeat</code></h2>
+    <div class="box"></div>
+    <h2><code>background-repeat: no-repeat</code></h2>
+    <div class="box no-repeat"></div>
+    <h2><code>background-repeat: repeat-x</code></h2>
+    <div class="box repeat-x"></div>
+    <h2><code>background-repeat: repeat-y</code></h2>
+    <div class="box repeat-y"></div>
+    <h2><code>background-repeat: round</code></h2>
+    <div class="box tile-round"></div>
+    <h2><code>background-repeat: space</code></h2>
+    <div class="box tile-space"></div>
+    <h2><code>background-repeat: space round</code></h2>
+    <div class="box tile-round-space"></div>
+    <h2><code>background-repeat: space repeat</code></h2>
+    <div class="box tile-space-repeat"></div>
+  </body>
+</html>
