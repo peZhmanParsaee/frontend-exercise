@@ -55,12 +55,12 @@ a:active {
 .title > h1 {
   color: #333;
   text-transform: uppercase;
-  font-size: 1.5em;
-  padding: 0.2em 0;
+  font-size: 1.5rem;
+  margin: 0.2em 0;
 }
 
 /* @media (min-width: 560px) { */
-@media (min-wdith: 35em) {
+@media (min-width: 35em) {
   .title > h1 {
     font-size: 2.25rem;
   }
@@ -75,7 +75,7 @@ a:active {
 .hero {
   padding: 2em 1em;
   text-align: center;
-  background-image: url(coffee-beans.jpg);
+  background-image: url(coffee-beans-small.jpg);
   background-position: center;
   background-size: 100%;
   color: #fff;
@@ -86,12 +86,14 @@ a:active {
   .hero {
     padding: 5em 3em;
     font-size: 1.2rem;
+    background-image: url(coffee-beans-medium.jpg);
   }
 }
 
 @media (min-width: 50em) {
   .hero {
     padding: 7em 6em;
+    background-image: url(coffee-beans.jpg);
   }
 }
 
@@ -126,10 +128,8 @@ main {
   position: absolute;
   top: -1.2em;
   right: 0.1em;
-
   border: 0;
   background-color: transparent;
-
   font-size: 3em;
   width: 1em;
   height: 1em;
@@ -146,13 +146,19 @@ main {
   display: block;
   text-indent: 0;
   content: "\2261";
+  transition: transform 0.5s;
+}
+
+.menu-toggle:hover::after {
+  transform: scaleX(1.2);
 }
 
 .menu-dropdown {
   display: none;
   position: absolute;
   left: 0;
-  top: 0;
+  /* top: 0; */
+  right: 0;
   margin: 0;
 }
 
@@ -169,6 +175,10 @@ main {
 
 .menu.is-open .menu-dropdown {
   display: block;
+}
+
+.menu.is-open .menu-toggle::after {
+  content: "\00d7";
 }
 
 .nav-menu {
