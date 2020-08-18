@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modular CSS Media Sample</title>
+    <style>
+      :root {
+        box-sizing: border-box;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+
+      body {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      body > * + * {
+        margin-top: 1.5em;
+      }
+
+      .media {
+        padding: 1.5em;
+        background-color: #eee;
+        border-radius: 0.5em;
+      }
+
+      .media::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      .media__image {
+        float: left;
+        margin-right: 1.5em;
+        width: 100px;
+      }
+
+      .media--right > .media__image {
+        float: right;
+      }
+
+      .media__body {
+        overflow: auto;
+        margin-top: 0;
+      }
+
+      .media__body > h4 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="media">
+      <img src="cplus.jpeg" class="media__image" />
+      <div class="media__body">
+        <h4>Strength</h4>
+        <p>
+          The C++ Programming Language is a computer programming book first published in October
+          1985. It was the first book to describe the C++ programming language, written by the
+          language's creator, Bjarne Stroustrup.
+        </p>
+      </div>
+    </div>
+
+    <div class="media media--right">
+      <img class="media__image" src="cplus.jpeg" />
+      <div class="media__body">
+        <h4>Strength</h4>
+        <p>
+          The C++ Programming Language is a computer programming book first published in October
+          1985. It was the first book to describe the C++ programming language, written by the
+          language's creator, Bjarne Stroustrup.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
