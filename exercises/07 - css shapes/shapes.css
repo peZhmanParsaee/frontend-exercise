@@ -34,6 +34,24 @@ body * + * {
   background-color: #600;
 }
 
+.dashed-circle,
+.blob {
+  --diameter: 40vmin;
+  width: var(--diameter);
+  height: var(--diameter);
+}
+
+.dashed-circle {
+  border: 10px dashed #000;
+  border-radius: 50%;
+}
+
+.blob {
+  border: 10px dashed #000;
+  background-color: #000;
+  border-radius: 50% 40% 30% 35%;
+}
+
 .shape {
   width: 100px;
   height: 100px;
