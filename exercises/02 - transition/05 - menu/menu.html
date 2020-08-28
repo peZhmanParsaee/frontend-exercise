@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drop Down Menu</title>
+    <style>
+      body {
+        font-family: Futura, Arial, sans-serif;
+      }
+      nav {
+        height: 41px;
+        padding: 0;
+        border-radius: 5px;
+        background: linear-gradient(to bottom, rgb(93, 146, 207), rgb(79, 79, 181));
+      }
+      nav > ul {
+        margin: 0;
+        padding-left: 0;
+      }
+      nav > ul::after,
+      nav > ul::before {
+        clear: both;
+        content: " ";
+        display: block;
+      }
+      nav > ul > li {
+        display: block;
+        position: relative;
+        width: 150px;
+        text-align: center;
+        float: left;
+        margin: 0;
+        padding: 0;
+        transition: 1.3s all linear;
+      }
+      nav > ul > li:hover {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+      }
+      nav ul.submenu {
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        right: 0;
+        height: 0px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+        transition: 10s all linear;
+      }
+      nav > ul > li:hover > ul.submenu {
+        height: auto;
+      }
+      nav ul.submenu > li {
+        float: none;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#">Services</a>
+          <ul class="submenu">
+            <li><a href="#">Service 1</a></li>
+            <li><a href="#">Service 2</a></li>
+            <li><a href="#">Service 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <p>It is a sample paragraph</p>
+    </main>
+  </body>
+</html>
