@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML5 Canvas - Curved Line</title>
+    <style>
+      svg {
+        opacity: 0.75;
+      }
+      svg:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="200"></canvas>
+
+    <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M 300 40 Q 270 130 195 115 Q 180 100 150 140 Q 115 190 70 160 Q 50 150 0 190 L 300 200"
+        stroke="#DAF1FF"
+        stroke-width="2"
+        fill="#F2FAFF"
+      />
+    </svg>
+
+    <script>
+      var canvas = document.getElementById("canvas");
+
+      var ctx = canvas.getContext("2d");
+
+      ctx.beginPath();
+
+      ctx.moveTo(300, 0);
+      ctx.quadraticCurveTo(250, 100, 220, 100);
+      ctx.quadraticCurveTo(180, 90, 150, 140);
+      ctx.quadraticCurveTo(100, 190, 60, 170);
+      ctx.quadraticCurveTo(50, 165, 0, 190);
+      ctx.lineTo(300, 200);
+
+      ctx.fillStyle = "#F2FAFF";
+      ctx.strokeStyle = "#DAF1FF";
+      ctx.fill();
+
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    </script>
+  </body>
+</html>
