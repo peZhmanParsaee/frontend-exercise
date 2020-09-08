@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Colors</title>
+    <style>
+      .box-container {
+        display: flex;
+      }
+      .box {
+        box-sizing: border-box;
+        height: 100px;
+        width: 200px;
+        padding: 1.5em;
+        text-align: center;
+        color: hsl(240, 100%, 100%);
+        text-shadow: 2px 1px 2px #000, -2px 1px 2px #000;
+        border: inset hsl(360, 100%, 0%) 1px;
+      }
+      .b11 {
+        background-color: hsl(180, 50%, 0%);
+      }
+      .b12 {
+        background-color: hsl(180, 50%, 25%);
+      }
+      .b13 {
+        background-color: hsl(180, 50%, 50%);
+      }
+      .b14 {
+        background-color: hsl(180, 50%, 75%);
+      }
+      .b15 {
+        background-color: hsl(180, 50%, 100%);
+      }
+
+      .b21 {
+        background-color: hsl(180, 0%, 50%);
+      }
+      .b22 {
+        background-color: hsl(180, 25%, 50%);
+      }
+      .b23 {
+        background-color: hsl(180, 50%, 50%);
+      }
+      .b24 {
+        background-color: hsl(180, 75%, 50%);
+      }
+      .b25 {
+        background-color: hsl(180, 100%, 50%);
+      }
+
+      table {
+        margin-top: 2em;
+        width: auto;
+        display: inline-block;
+      }
+      table + table {
+        margin-left: 2em;
+      }
+      table.shade td {
+        width: 42px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-container">
+      <div class="box b11"><code>hsl(180, 50%, 0%)</code></div>
+      <div class="box b12"><code>hsl(180, 50%, 25%)</code></div>
+      <div class="box b13"><code>hsl(180, 50%, 50%)</code></div>
+      <div class="box b14"><code>hsl(180, 50%, 75%)</code></div>
+      <div class="box b15"><code>hsl(180, 50%, 100%)</code></div>
+    </div>
+
+    <div class="box-container">
+      <div class="box b21"><code>hsl(180, 0%, 50%)</code></div>
+      <div class="box b22"><code>hsl(180, 25%, 50%)</code></div>
+      <div class="box b23"><code>hsl(180, 50%, 50%)</code></div>
+      <div class="box b24"><code>hsl(180, 75%, 50%)</code></div>
+      <div class="box b25"><code>hsl(180, 100%, 50%)</code></div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hue</th>
+          <th>hsl(H, S, L)</th>
+          <th>Color</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td>
+          <td>hsl(240, 100%, 50%)</td>
+          <td style="background-color: hsl(240, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>60</td>
+          <td>hsl(60, 100%, 50%)</td>
+          <td style="background-color: hsl(60, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>120</td>
+          <td>hsl(120, 100%, 50%)</td>
+          <td style="background-color: hsl(120, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>180</td>
+          <td>hsl(180, 100%, 50%)</td>
+          <td style="background-color: hsl(180, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>240</td>
+          <td>hsl(240, 100%, 50%)</td>
+          <td style="background-color: hsl(240, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>300</td>
+          <td>hsl(300, 100%, 50%)</td>
+          <td style="background-color: hsl(300, 100%, 50%)"></td>
+        </tr>
+        <tr>
+          <td>360</td>
+          <td>hsl(360, 100%, 50%)</td>
+          <td style="background-color: hsl(360, 100%, 50%)"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="shade">
+      <tr>
+        <td style="background-color: hsl(240, 100%, 88%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 88%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 88%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 88%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 88%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 75%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 75%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 75%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 75%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 75%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 63%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 63%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 63%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 63%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 63%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 50%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 50%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 50%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 50%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 50%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 38%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 38%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 38%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 38%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 38%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 25%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 25%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 25%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 25%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 25%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 13%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 13%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 13%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 13%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 13%)">&nbsp;</td>
+      </tr>
+      <tr>
+        <td style="background-color: hsl(240, 100%, 0%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 75%, 0%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 50%, 0%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 25%, 0%)">&nbsp;</td>
+        <td style="background-color: hsl(240, 0%, 0%)">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
